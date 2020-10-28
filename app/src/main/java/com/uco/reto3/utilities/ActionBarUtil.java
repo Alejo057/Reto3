@@ -11,9 +11,6 @@ public class ActionBarUtil {
         this.appCompatActivity = appCompatActivity;
     }
 
-
-
-
     public void setToolBar(String mensaje) {
         if (appCompatActivity.getSupportActionBar() != null) {
             appCompatActivity.getSupportActionBar().setDisplayShowHomeEnabled(true);
