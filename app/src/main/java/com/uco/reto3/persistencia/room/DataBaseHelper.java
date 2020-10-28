@@ -1,4 +1,4 @@
-package com.uco.reto3.persistencia.room;
+/*package com.uco.reto3.persistencia.room;
 
 import android.content.Context;
 import androidx.room.Database;
@@ -42,8 +42,8 @@ public abstract class DataBaseHelper extends RoomDatabase {
      * Listado de DAO
      */
 
-    public abstract TarifaDAO getTarifaDAO();
+ /*   public abstract TarifaDAO getTarifaDAO();
 
     public abstract MovimientoDAO getMovimientoDAO();
 
-}
+}*/

@@ -52,7 +52,7 @@ public class MovimientoActivity extends AppCompatActivity {
         ButterKnife.bind(this);
         initComponents();
         hideComponents();
-        cargarSpinner();
+        //cargarSpinner();
         spinnerOnItemSelected();
     }
 
@@ -70,7 +70,7 @@ public class MovimientoActivity extends AppCompatActivity {
         });
     }
 
-    private void cargarSpinner() {
+    /*private void cargarSpinner() {
         listaTarifas = db.getTarifaDAO().listar();
         if(listaTarifas.isEmpty()){
             Toast.makeText(getApplication(),R.string.sin_tarifas,Toast.LENGTH_SHORT).show();
@@ -84,7 +84,7 @@ public class MovimientoActivity extends AppCompatActivity {
             tipoTarifaSpinner.setAdapter(arrayAdapter);
 
         }
-    }
+    }*/
 
     private void hideComponents() {
         tipoTarifaSpinner.setVisibility(View.GONE);
@@ -127,12 +127,12 @@ public class MovimientoActivity extends AppCompatActivity {
     }
 
     public void registrarIngreso(View view) {
-        if(tarifa == null){
+        /*if(tarifa == null){
             Toast.makeText(getApplicationContext(),R.string.debe_seleccionar_tarifa, Toast.LENGTH_SHORT).show();
-        }else if(movimiento == null){
+        }else*/ if(movimiento == null){
             movimiento = new Movimiento();
             movimiento.setPlaca(txtPlaca.getText().toString());
-            movimiento.setIdTarifa(tarifa.getIdTarifa());
+            //movimiento.setIdTarifa(tarifa.getIdTarifa());
             movimiento.setFechaEntrada(DateUtil.convertDateToStringNotHour(new Date()));
             new InsercionMoviento().execute(movimiento);
             movimiento = null;
@@ -155,4 +155,7 @@ public class MovimientoActivity extends AppCompatActivity {
         }
     }
 
+    public void pantallaTarifa(View view){
+        setContentView(R.layout.activity_registro_tarifa);
+    }
 }

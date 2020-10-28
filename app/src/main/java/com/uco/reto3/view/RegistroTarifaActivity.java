@@ -24,6 +24,7 @@ public class RegistroTarifaActivity extends AppCompatActivity {
     @BindView(R.id.txtValorTarifa)
     public EditText txtValorTarifa;
     private ActionBarUtil actionBarUtil;
+    private AppDatabase
 
 
     @Override
@@ -44,9 +45,7 @@ public class RegistroTarifaActivity extends AppCompatActivity {
         String nombreTarifa = txtNombreTarifa.getText().toString();
         Double valorTarifa = toDouble(txtValorTarifa.getText().toString());
         if (validarInformacion(nombreTarifa, valorTarifa)) {
-            Tarifa tarifa = getTarifa(nombreTarifa, valorTarifa);
-            new InsercionTarifa().execute(tarifa);
-            finish();
+            AppDataBase
         }
     }
 
