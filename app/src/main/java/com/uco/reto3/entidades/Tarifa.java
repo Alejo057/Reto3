@@ -10,9 +10,7 @@ import com.uco.reto3.persistencia.Tabla;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Data
 @Entity(tableName = Tabla.TARIFA)
-@NoArgsConstructor
 public class Tarifa {
 
     @PrimaryKey(autoGenerate = true)
@@ -24,4 +22,31 @@ public class Tarifa {
     @ColumnInfo(name = "precio")
     private double precio;
 
+    public Tarifa() {
+    }
+
+    @NonNull
+    public Integer getIdTarifa() {
+        return idTarifa;
+    }
+
+    public void setIdTarifa(@NonNull Integer idTarifa) {
+        this.idTarifa = idTarifa;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public double getPrecio() {
+        return precio;
+    }
+
+    public void setPrecio(double precio) {
+        this.precio = precio;
+    }
 }
